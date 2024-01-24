@@ -1,0 +1,18 @@
+hash is a one-way func, pwd goes in this func generates a string
+even if hackers get the pwd's hash, nothing can be done
+hash ka hash won't give back the pwd.
+mk-5 hashing algo example
+
+solution with hackers: having hashes of common passwords stored in a table called rainbow table.
+
+now developers overcome this limitation by using salt, adding salt to all passwords, so If I keep my password 123456, the administrator saves it as 123456+1b@ce9 i.e added salt.
+
+bycrpt js which automactically adds gensalt
+
+pepper is something added to the pwd+salt, and this pepper isn't sent to the database. It's kept in the backend hardcoded
+
+JWT is used to access protected routes, given to users to access
+decoding JWT:
+1. header: Algo & Token Type
+2. Payload: data
+3. Verify signature: every jwt dispatched is signed by us
